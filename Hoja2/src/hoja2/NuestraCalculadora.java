@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hoja2;
+
 
 /**
  *
@@ -15,7 +15,9 @@ public class NuestraCalculadora implements Calculadora{
 	Stack<Integer> stack2 = new StackVector<Integer>();
 	String linea;
 	int resultado;
-	int contador; //contador para saber cuantas veces recorrer el for del stack
+	int contador, contador2; //contador para saber cuantas veces recorrer el for del stack
+  int numero;
+  int numero1, numero2;
   public void setString(String linea){
    		this.linea = linea;
   }
@@ -43,6 +45,58 @@ public class NuestraCalculadora implements Calculadora{
   public void calcularVector(){
    	for (int x = 0; x==contador; x++){
    			String s2 = stack1.pop();
+        if ((s2=="0") || (s2=="1") || (s2=="2") || (s2=="3") || (s2=="4") || (s2=="5") || (s2=="6") || (s2=="7") || (s2=="8") || (s2=="9")){
+          numero = Integer.parseInt(s2);
+          stack2.push(numero);
+          contador2++;
+        }
+        if (s2=="+"){
+          numero1 = stack2.pop();
+          numero2 = stack2.pop();
+          resultado = (numero2 + numero1);
+          String s3 = Integer.toString(resultado);
+          stack1.push(s3);
+          contador2--;
+        }
+
+        if (s2=="-"){
+          numero1 = stack2.pop();
+          numero2 = stack2.pop();
+          resultado = (numero2 - numero1);
+          String s3 = Integer.toString(resultado);
+          stack1.push(s3);
+          contador2--;
+        }
+
+        if (s2=="*"){
+          numero1 = stack2.pop();
+          numero2 = stack2.pop();
+          resultado = (numero2 * numero1);
+          String s3 = Integer.toString(resultado);
+          stack1.push(s3);
+          contador2--;
+        }
+
+        if (s2=="/"){
+          numero1 = stack2.pop();
+          numero2 = stack2.pop();
+          try {
+            resultado = (numero2 / numero1);
+            String s3 = Integer.toString(resultado);
+            stack1.push(s3);
+            contador2--;
+          }
+          catch (ArithmeticException e){
+            //Error: division por cero
+          }
+          if ((stack2.empty())==false){
+            for (int y = 0; y==contador; y++){
+              String s4 = Integer.toString(stack2.pop());
+              stack1.push(s4);
+            }
+          }
+        }
+
    	}
 
    }
