@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package hoja2;
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,11 +16,24 @@ public class DriverCalc{
 
 	public static void main(String[] args){
 
+                File file = new File("file.txt");
 		Calculadora Casio = new NuestraCalculadora();
-		try(BufferedReader br = new BufferedReader(new FileReader(file))) {
-	    	for(String line; (line = br.readLine()) != null; ) {
-	        	Casio.setString(line);
-	    	}
-		}	
+		try{
+                    BufferedReader br = new BufferedReader(new FileReader(file));
+                    try {
+                        for(String line; (line = br.readLine()) != null; ) {
+                            Casio.setString(line);
+                            Casio.meterVector();
+                            Casio.calcularVector();
+                            System.out.println(Casio.getResultado());
+                        }
+                    } catch (IOException ex) {
+                        Logger.getLogger(DriverCalc.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+		catch (FileNotFoundException ex) {
+                Logger.getLogger(DriverCalc.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                
 	}
 }
