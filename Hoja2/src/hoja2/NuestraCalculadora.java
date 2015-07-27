@@ -3,8 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
+package hoja2;
 /**
  *
  * @author Alejandro, Belen, Juan Diego, Daniela
@@ -28,6 +27,8 @@ public class NuestraCalculadora implements Calculadora{
 
   public void meterVector(){
     contador = 0;
+    letras = 0;
+    numeros = 0;
     for (int x=linea.length()-1; x>=0; x--){
       if((linea.charAt(x)==42) || (linea.charAt(x)==43) || (linea.charAt(x)==45) || ((linea.charAt(x))>=47) && (linea.charAt(x)<=57)){ //si son signos o numeros
           String s1 = Character.toString(linea.charAt(x));
@@ -47,12 +48,13 @@ public class NuestraCalculadora implements Calculadora{
           }  
           
           contador++;
+          calcular = true;
       }
       else if(linea.charAt(x)==32){
 
       }
       else{
-        //tronitos
+        calcular=false;
       }
     }
       //=stack1
@@ -60,8 +62,6 @@ public class NuestraCalculadora implements Calculadora{
 
   public boolean calcularVector(){ //try-catch NumberFormatException
   	  primero = stack1.pop();//saca el primero para verificar si es signo
-  	  System.out.println(letras);
-  	  System.out.println(numeros);
   	  if(primero.equals("+") || primero.equals("-") || primero.equals("*") || primero.equals("/")){
   	  	  calcular=false; //si el primero es signo, no se realiza operacion
   	  }
@@ -75,8 +75,13 @@ public class NuestraCalculadora implements Calculadora{
 				  calcular=false;
   	  	  	  }
   	  	  	  else{
+  	  	  	  	if(calcular==false){
+
+  	  	  	  	}
+  	  	  	  	else if(calcular==true){
 				  calcular=true;
 				  stack1.push(primero);
+				}
   	  	  	  }
   	  	  }
   	  }
