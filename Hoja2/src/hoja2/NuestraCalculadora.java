@@ -7,7 +7,7 @@
 
 /**
  *
- * @author dbs_jd
+ * @author Alejandro, Belen, Juan Diego, Daniela
  */
 public class NuestraCalculadora implements Calculadora{
 
@@ -16,8 +16,10 @@ public class NuestraCalculadora implements Calculadora{
   String linea, primero;
   int resultado;
   int contador, contador2; //contador para saber cuantas veces recorrer el for del stack
+  int numeros,letras;
   int numero;
   int numero1, numero2;
+  char last;
   boolean calcular;
   
   public void setString(String linea){
@@ -30,6 +32,20 @@ public class NuestraCalculadora implements Calculadora{
       if((linea.charAt(x)==42) || (linea.charAt(x)==43) || (linea.charAt(x)==45) || ((linea.charAt(x))>=47) && (linea.charAt(x)<=57)){ //si son signos o numeros
           String s1 = Character.toString(linea.charAt(x));
           stack1.push(s1);
+          if((linea.charAt(x)==42) || (linea.charAt(x)==43) || (linea.charAt(x)==45) || ((linea.charAt(x))==47)){
+          	  letras++; //suma cantidad de signos
+          }
+          else if((linea.charAt(x)>47) && (linea.charAt(x)<=57)){
+          	  numeros++; //suma la cantidad de numeros
+          }
+          
+          if(x==linea.length()-1){
+          	  last = linea.charAt(x); //se almacena el ultimo valor del vector
+          }
+          else{
+          
+          }  
+          
           contador++;
       }
       else if(linea.charAt(x)==32){
@@ -44,14 +60,25 @@ public class NuestraCalculadora implements Calculadora{
 
   public boolean calcularVector(){ //try-catch NumberFormatException
   	  primero = stack1.pop();//saca el primero para verificar si es signo
-  	  
+  	  System.out.println(letras);
+  	  System.out.println(numeros);
   	  if(primero.equals("+") || primero.equals("-") || primero.equals("*") || primero.equals("/")){
   	  	  calcular=false; //si el primero es signo, no se realiza operacion
   	  }
   	  
   	  else{
-  	  	  calcular=true;
-  	  	  stack1.push(primero);
+  	  	  if(numeros<letras || numeros==letras){ //si hay mas signos que numeros o la misma cantidad es error
+  	  	  	  calcular=false;
+  	  	  }
+  	  	  else{
+  	  	  	  if(last>47 && last <= 57){ //si el ultimo valor es un numero, error
+				  calcular=false;
+  	  	  	  }
+  	  	  	  else{
+				  calcular=true;
+				  stack1.push(primero);
+  	  	  	  }
+  	  	  }
   	  }
   	  
   	  if(calcular==true){
