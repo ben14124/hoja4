@@ -14,7 +14,7 @@ public interface Calculadora {
 
    public void meterVector();
 
-   public void calcularVector();
+   public boolean calcularVector();
 
    public int getResultado();
 
