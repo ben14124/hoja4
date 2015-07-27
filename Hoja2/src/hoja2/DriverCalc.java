@@ -27,7 +27,7 @@ public class DriverCalc{
                             Casio.meterVector();
                             hacer=Casio.calcularVector();
                             if (hacer==true){ //si no hay error se obtiene resultado
-                            	    System.out.println(Casio.getResultado());
+                            	    System.out.println("El resultado es: "+Casio.getResultado());
                             }
                             else if (hacer==false){ //si hay error se indica
                             	    System.out.println("ERROR.");
