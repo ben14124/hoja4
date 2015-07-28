@@ -6,8 +6,9 @@
 package hoja2;
 
 /**
- *
- * @author dbs_jd
+ * Clase vector que implementa a Stack. En esta clase se define el funcionamiento de los metodos de Stack.
+ * @see Stack 
+ * @author Juan Diego Benitez, Daniela Pocasangre, Belen Hernandez y Alejandro Rivera
  */
 import java.util.Vector;
 
