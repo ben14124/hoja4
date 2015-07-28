@@ -10,16 +10,16 @@ package hoja2;
  */
 public class NuestraCalculadora implements Calculadora{
 
-  Stack<String> stack1 = new StackVector<String>();
-  Stack<Integer> stack2 = new StackVector<Integer>();
-  String linea, primero;
-  int resultado;
-  int contador, contador2; //contador para saber cuantas veces recorrer el for del stack
-  int numeros,letras;
-  int numero;
-  int numero1, numero2;
-  char last;
-  boolean calcular;
+  private Stack<String> stack1 = new StackVector<String>();
+  private Stack<Integer> stack2 = new StackVector<Integer>();
+  private String linea, primero;
+  private int resultado;
+  private int contador, contador2; //contador para saber cuantas veces recorrer el for del stack
+  private int numeros,letras;
+  private int numero;
+  private int numero1, numero2;
+  private char last;
+  private boolean calcular;
   
   public void setString(String linea){
       this.linea = linea;
