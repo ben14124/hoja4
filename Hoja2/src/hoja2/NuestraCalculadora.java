@@ -5,8 +5,9 @@
  */
 package hoja2;
 /**
- *
- * @author Alejandro, Belen, Juan Diego, Daniela
+ * Esta clase implementa a la interface Calculadora; aqui se crea el funcionamiento e los metodos.
+ * @see Calculadora 
+ * @author Juan Diego Benitez, Daniela Pocasangre, Belen Hernandez y Alejandro Rivera
  */
 public class NuestraCalculadora implements Calculadora{
 
