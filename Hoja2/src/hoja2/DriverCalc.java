@@ -10,8 +10,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author Juan Diego, Daniela, Belen, Alejandro
+ * Driver del programa Calculadora. Aqui se define el documento de texto
+ * que se va a utilizar y se imprimen los resultados.
+ * @see Calculadora 
+ * @see NuestraCalculadora
+ * @see Stack
+ * @see StackVector
+ * @author Juan Diego Benitez, Daniela Pocasangre, Belen Hernandez y Alejandro Rivera
  */
 public class DriverCalc{
 
