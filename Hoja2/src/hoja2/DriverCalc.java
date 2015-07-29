@@ -22,7 +22,7 @@ public class DriverCalc{
 
 	public static void main(String[] args){
 		boolean hacer = true;
-                File file = new File("file.txt");
+                File file = new File("datos.txt");
 		Calculadora Casio = new NuestraCalculadora();
 		try{
                     BufferedReader br = new BufferedReader(new FileReader(file));
