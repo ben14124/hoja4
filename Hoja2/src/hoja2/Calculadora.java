@@ -1,10 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package hoja2;
+/***************************************************
+Universidad del Valle de Guatemala
+Juan Diego Benitez C. - 14124
+Daniela I. Pocasangre A. - 14162
+Ma. Belen Hernandez - 14361
+Jose Alejandro Rivera - 14213
+Algoritmos y Estructuras de Datos
+Seccion 30
+***************************************************/
 
+package hoja2;
 /**
  *Esta clase es la interfaz del programa.
  * @author Juan Diego Benitez, Daniela Pocasangre, Belen Hernandez y Alejandro Rivera

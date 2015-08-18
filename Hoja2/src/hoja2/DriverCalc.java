@@ -1,10 +1,13 @@
+/***************************************************
+Universidad del Valle de Guatemala
+Juan Diego Benitez C. - 14124
+Daniela I. Pocasangre A. - 14162
+Ma. Belen Hernandez - 14361
+Jose Alejandro Rivera - 14213
+Algoritmos y Estructuras de Datos
+Seccion 30
+***************************************************/
 package hoja2;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,12 +25,13 @@ public class DriverCalc{
 
 	public static void main(String[] args){
 		boolean hacer = true;
-                File file = new File("datos.txt");
+                File file = new File("file.txt");
 		Calculadora Casio = new NuestraCalculadora();
 		try{
                     BufferedReader br = new BufferedReader(new FileReader(file));
                     try {
                         for(String line; (line = br.readLine()) != null; ){
+                            System.out.println("Operacion ingresada: " + line + "\n");
                             Casio.setString(line);
                             Casio.meterVector();
                             hacer=Casio.calcularVector();
@@ -35,7 +39,7 @@ public class DriverCalc{
                             	    System.out.println("El resultado es: "+Casio.getResultado());
                             }
                             else if (hacer==false){ //si hay error se indica
-                            	    System.out.println("ERROR.");
+                            	    System.out.println("Error. Operacion ingresada no valida.");
                             }
                         }
                     }

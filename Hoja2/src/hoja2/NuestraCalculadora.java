@@ -1,8 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/***************************************************
+Universidad del Valle de Guatemala
+Juan Diego Benitez C. - 14124
+Daniela I. Pocasangre A. - 14162
+Ma. Belen Hernandez - 14361
+Jose Alejandro Rivera - 14213
+Algoritmos y Estructuras de Datos
+Seccion 30
+***************************************************/
 package hoja2;
 /**
  * Esta clase implementa a la interface Calculadora; aqui se crea el funcionamiento e los metodos.
@@ -11,8 +15,8 @@ package hoja2;
  */
 public class NuestraCalculadora implements Calculadora{
 
-  private Stack<String> stack1 = new StackVector<String>();
-  private Stack<Integer> stack2 = new StackVector<Integer>();
+  private Stack<String> stack1 = new StackLista<String>();
+  private Stack<Integer> stack2 = new StackLista<Integer>();
   private String linea, primero;
   private int resultado;
   private int contador, contador2; //contador para saber cuantas veces recorrer el for del stack
