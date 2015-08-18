@@ -12,7 +12,7 @@ public class SinglyLinkedList<E> extends abstractLista<E> {
       count = 0;
    }
    
-   public int size()
+   public int size() //getSize
    // post: returns number of elements in list
   {
     return count;
@@ -26,7 +26,7 @@ public class SinglyLinkedList<E> extends abstractLista<E> {
      if (count>0){
       head = new Node<E>(value, head);
      }
-     else if (count==0){
+     else if (count==0){ //la cola
      head = new Node<E>(value);
 
      }
@@ -48,5 +48,17 @@ public class SinglyLinkedList<E> extends abstractLista<E> {
  // post: returns first value in list
  {
 	return head.value();
+ }
+ 
+ public E removeLast(){
+     E cola = head.value(); //inicializamos la variable cola 
+     int countlast = count; //guardamos el valor del contador
+     while (countlast!=0){ //hasta que lleguemos al final
+         head = head.next(); //corremos al siguiente nodo
+         countlast--; //restamos 1 al contador temporal
+         
+     }
+     cola = head.value(); //obtenemos el valor del ultimo nodo
+     return cola; //retornamos su valor
  }
 }
