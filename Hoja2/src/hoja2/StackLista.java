@@ -18,13 +18,13 @@ public class StackLista<E> implements Stack<E>
 	// post: constructs a new, empty stack
 	{
             if(valor==1){
-               data = new DoublyLinkedList<E>();
+               data = new SinglyLinkedList<E>();
             }
             if(valor==2){
-                data = new CircularList<E>();
+                data = new DoublyLinkedList<E>();
             }
-            else{
-                data = new SinglyLinkedList<E>();
+            if(valor==3){
+                data = new CircularList<E>();
             }
 	}
 
