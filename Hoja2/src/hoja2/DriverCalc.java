@@ -26,7 +26,7 @@ public class DriverCalc{
 	public static void main(String[] args){
 		boolean hacer = true;
                 File file = new File("file.txt");
-		Calculadora Casio = new NuestraCalculadora();
+		Calculadora Casio = NuestraCalculadora.getCalculadora();//Se crea la instancia de NuestraCalculadora a partir del patron de diseno singleton
 		try{
                     BufferedReader br = new BufferedReader(new FileReader(file));
                     try {

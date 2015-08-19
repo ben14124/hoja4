@@ -25,6 +25,17 @@ public class NuestraCalculadora implements Calculadora{
   private int numero1, numero2;
   private char last;
   private boolean calcular;
+  private static NuestraCalculadora singleCalcu; //variable estatica para uso del patron de diseno singleton
+  
+  private NuestraCalculadora(){} //constructor privatizado para uso del patron de diseno singleton
+  
+  //Metodo getCalculadora para crear una unica instancia de la clase NuestraCalculadora (patron singleton)
+  public static NuestraCalculadora getCalculadora(){
+      if (singleCalcu==null){
+          singleCalcu= new NuestraCalculadora();
+      }
+      return singleCalcu;
+  }
   
   public void setString(String linea){
       this.linea = linea;
