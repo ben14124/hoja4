@@ -31,7 +31,7 @@ public class DriverCalc{
 		boolean hacer = true;
                 File file = new File("file.txt");
                 //se solicita el tipo de implementacion al usuario
-                System.out.println("Indique por medio del numero que implementacion para el Stack desea utilizar\n1.ArrayList\n2.Vactor\n3.Lista");
+                System.out.println("Indique por medio del numero que implementacion para el Stack desea utilizar\n1.ArrayList\n2.Vector\n3.Lista");
                 eleccion= scan.nextInt();
                 //de seleccionar una lista, se solicita el tipo de lista
                 if (eleccion == 3){
