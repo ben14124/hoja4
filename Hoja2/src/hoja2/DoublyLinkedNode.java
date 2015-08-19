@@ -20,4 +20,25 @@ public DoublyLinkedNode(E v)
 {
     this(v,null,null);
 }
+
+public DoublyLinkedNode<E> previous(){
+    return previousElement; 
+}
+
+public E value(){
+    return data;
+}
+
+public void setNext(DoublyLinkedNode<E> next)
+   // post: sets reference to new next value
+   {
+      nextElement = next;
+   }
+
+   public DoublyLinkedNode<E> next()
+   // post: returns reference to next value in list
+   {
+      return nextElement;
+   }
+   
 }
