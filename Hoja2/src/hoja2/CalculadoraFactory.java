@@ -10,7 +10,7 @@ package hoja2;
  */
 public class CalculadoraFactory {
     //metodo que devolvera una instancia del tipo de implementacion que se quiera para el stack
-    public Stack implementacionInt(int eleccion){
+    public Stack implementacionInt(int eleccion, int eleccion2){
          Stack<Integer> implementacionStack = null;
             if (eleccion==1){
                 implementacionStack = new StackArrayList<Integer>();
@@ -19,17 +19,11 @@ public class CalculadoraFactory {
                 implementacionStack = new StackVector<Integer>();
             }
             if (eleccion==3){
-                implementacionStack = new StackLista<Integer>();
-            }
-            if (eleccion==1){
-                implementacionStack = new StackLista<Integer>();
-            }
-            if (eleccion==1){
-                implementacionStack = new StackLista<Integer>();
+                implementacionStack = new StackLista<Integer>(eleccion2);
             }
        return implementacionStack;
     }
-    public Stack implementacionString(int eleccion){  
+    public Stack implementacionString(int eleccion, int eleccion2){  
         Stack<String> implementacionStack = null;
             if (eleccion==1){
                 implementacionStack = new StackArrayList<String>();
@@ -38,13 +32,7 @@ public class CalculadoraFactory {
                 implementacionStack = new StackVector<String>();
             }
             if (eleccion==3){
-                implementacionStack = new StackLista<String>();
-            }
-            if (eleccion==1){
-                implementacionStack = new StackLista<String>();
-            }
-            if (eleccion==1){
-                implementacionStack = new StackLista<String>();
+                implementacionStack = new StackLista<String>(eleccion2);
             }
         return implementacionStack;
     }
