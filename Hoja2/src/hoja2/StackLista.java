@@ -11,15 +11,21 @@ package hoja2;
  * @author DLBarrios
  */
 public class StackLista<E> implements Stack<E>
-{
-	protected CircularList<E> data;
-    //protected DoublyLinkedList<E> data;
-
-	public StackLista()
+{        
+        Lista<E> data;
+    
+	public StackLista(int valor)
 	// post: constructs a new, empty stack
 	{
-            //data = new DoublyLinkedList<E>();
-		data = new CircularList<E>();
+            if(valor==3){
+               data = new DoublyLinkedList<E>();
+            }
+            if(valor==4){
+                data = new CircularList<E>();
+            }
+            else{
+                data = new SinglyLinkedList<E>();
+            }
 	}
 
 	public void push(E item)
