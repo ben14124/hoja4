@@ -40,13 +40,13 @@ public class DriverCalc{
                     eleccionLista=scan.nextInt();
                     //se modifica el valor de eleccion dependiendo del tipo de lista
                     if (eleccionLista==1){
-                        eleccion2=3;
+                        eleccion2=1;
                     }
                     if (eleccionLista==2){
-                        eleccion2=4;
+                        eleccion2=2;
                     }
                     if (eleccionLista==3){
-                        eleccion2=5;
+                        eleccion2=3;
                     }
                 }
                 /*
