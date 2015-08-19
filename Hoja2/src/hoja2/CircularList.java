@@ -27,10 +27,14 @@ public void addFirst(E value)
 // post: adds element to head of list
 {
    Node<E> temp = new Node<E>(value);
+   
+   System.out.println(value);
+   
    if (tail == null) { // first value added
        tail = temp;
        tail.setNext(tail);
-   } else { // element exists in list
+   } 
+   else { // element exists in list
        temp.setNext(tail.next());
        tail.setNext(temp);
    }
@@ -78,14 +82,21 @@ public E removeLast()
   }
    
    
-     public E removeFirst()
+    public E removeFirst()
   // pre: list is not empty
   // post: removes and returns value from beginning of list
  {
-	Node<E> temp = tail.next();
-	//head = head.next(); // move head down list
+	Node<E> head = tail.next();
+        
+        if(count==1){
+            head.setNext(null);
+        }
+        else{
+            Node<E> temp= head.next();
+            tail.setNext(temp);
+        }
 	count--;
-	return temp.value();
+	return head.value();
  }
 
  public E getFirst() 
