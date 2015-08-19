@@ -29,6 +29,7 @@ public class DriverCalc{
                 int eleccion; //contendra un numero correspondiente al tipo de implementacion seleccionada
                 int eleccionLista; //una eleccion temporal de lista
 		boolean hacer = true;
+                int eleccion2=0;
                 File file = new File("file.txt");
                 //se solicita el tipo de implementacion al usuario
                 System.out.println("Indique por medio del numero que implementacion para el Stack desea utilizar\n1.ArrayList\n2.Vector\n3.Lista");
@@ -39,13 +40,13 @@ public class DriverCalc{
                     eleccionLista=scan.nextInt();
                     //se modifica el valor de eleccion dependiendo del tipo de lista
                     if (eleccionLista==1){
-                        eleccion=3;
+                        eleccion2=3;
                     }
                     if (eleccionLista==2){
-                        eleccion=4;
+                        eleccion2=4;
                     }
                     if (eleccionLista==3){
-                        eleccion=5;
+                        eleccion2=5;
                     }
                 }
                 /*
@@ -58,9 +59,9 @@ public class DriverCalc{
                  //se instancia la clase factory
                 CalculadoraFactory factoryCalcu = new CalculadoraFactory();
                 //se obtiene un stack de Int de acuerdo a la implementacio deseada
-                Stack stackInt= factoryCalcu.implementacionInt(eleccion);
+                Stack stackInt= factoryCalcu.implementacionInt(eleccion, eleccion2);
                 //se obtiene un stack de String de acuerdo a la implementacion deseada
-                Stack stackString= factoryCalcu.implementacionString(eleccion);
+                Stack stackString= factoryCalcu.implementacionString(eleccion, eleccion2);
                 
                 //se instancia la clase NuestraCalculadora con los stacks como parametros
 		Calculadora Casio = NuestraCalculadora.getCalculadora(stackString, stackInt);//Se crea la instancia de NuestraCalculadora a partir del patron de diseno singleton
