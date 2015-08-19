@@ -22,7 +22,7 @@ public class StackVector<E> implements Stack<E>
 	public StackVector()
 	// post: constructs a new, empty stack
 	{
-		data = new Vector<E>();
+            data = new Vector<E>();
 	}
 
 	public void push(E item)
