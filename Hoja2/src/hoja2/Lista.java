@@ -10,4 +10,8 @@ public interface Lista<E>
     
    public void addFirst(E value);
    // post: value is added to beginning of list
+    public E getFirst();
+    
+    public E removeFirst();
+
 }
