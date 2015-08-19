@@ -15,7 +15,7 @@ package hoja2;
  */
 import java.util.ArrayList;
 
-public class StackArrayList<E> implements Stack<E>
+public class StackArrayList<E> extends abstractStack<E>
 {
 	protected ArrayList<E> data;
 

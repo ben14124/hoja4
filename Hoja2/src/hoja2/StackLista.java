@@ -14,7 +14,7 @@ package hoja2;
  *
  * @author DLBarrios
  */
-public class StackLista<E> implements Stack<E>
+public class StackLista<E> extends abstractStack<E>
 {        
         Lista<E> data;
     

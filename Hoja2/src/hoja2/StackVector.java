@@ -15,7 +15,7 @@ package hoja2;
  */
 import java.util.Vector;
 
-public class StackVector<E> implements Stack<E>
+public class StackVector<E> extends abstractStack<E>
 {
 	protected Vector<E> data;
 
