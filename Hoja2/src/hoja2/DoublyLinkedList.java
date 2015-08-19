@@ -86,9 +86,5 @@ public E removeLast()
  {
 	return head.value();
  }
- 
- 
-
-
 
 }
