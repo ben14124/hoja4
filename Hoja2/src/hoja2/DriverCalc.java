@@ -11,6 +11,7 @@ package hoja2;
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.Scanner;
 
 /**
  * Driver del programa Calculadora. Aqui se define el documento de texto
@@ -24,10 +25,47 @@ import java.util.logging.Logger;
 public class DriverCalc{
 
 	public static void main(String[] args){
+                Scanner scan = new Scanner (System.in);
+                int eleccion; //contendra un numero correspondiente al tipo de implementacion seleccionada
+                int eleccionLista; //una eleccion temporal de lista
 		boolean hacer = true;
                 File file = new File("file.txt");
-		Calculadora Casio = NuestraCalculadora.getCalculadora();//Se crea la instancia de NuestraCalculadora a partir del patron de diseno singleton
-		try{
+                //se solicita el tipo de implementacion al usuario
+                System.out.println("Indique por medio del numero que implementacion para el Stack desea utilizar\n1.ArrayList\n2.Vactor\n3.Lista");
+                eleccion= scan.nextInt();
+                //de seleccionar una lista, se solicita el tipo de lista
+                if (eleccion == 3){
+                    System.out.println("Que tipo de lista?\n1.Simplemente Encadenada\n2.Doblemente Encadenada\n3.Circular");
+                    eleccionLista=scan.nextInt();
+                    //se modifica el valor de eleccion dependiendo del tipo de lista
+                    if (eleccionLista==1){
+                        eleccion=3;
+                    }
+                    if (eleccionLista==2){
+                        eleccion=4;
+                    }
+                    if (eleccionLista==3){
+                        eleccion=5;
+                    }
+                }
+                /*
+                eleccion =1 es un ArrayList
+                eleccion =2 es un vector
+                eleccion =3 es una singly linked list
+                eleccion =4 es una double linked list
+                eleccion =5 es una circular list
+                */
+                 //se instancia la clase factory
+                CalculadoraFactory factoryCalcu = new CalculadoraFactory();
+                //se obtiene un stack de Int de acuerdo a la implementacio deseada
+                Stack stackInt= factoryCalcu.implementacionInt(eleccion);
+                //se obtiene un stack de String de acuerdo a la implementacion deseada
+                Stack stackString= factoryCalcu.implementacionString(eleccion);
+                
+                //se instancia la clase NuestraCalculadora con los stacks como parametros
+		Calculadora Casio = NuestraCalculadora.getCalculadora(stackString, stackInt);//Se crea la instancia de NuestraCalculadora a partir del patron de diseno singleton
+		
+                try{
                     BufferedReader br = new BufferedReader(new FileReader(file));
                     try {
                         for(String line; (line = br.readLine()) != null; ){

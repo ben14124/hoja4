@@ -15,8 +15,8 @@ package hoja2;
  */
 public class NuestraCalculadora implements Calculadora{
 
-  private Stack<String> stack1 = new StackLista<String>();
-  private Stack<Integer> stack2 = new StackLista<Integer>();
+  private Stack<String> stack1;
+  private Stack<Integer> stack2;
   private String linea, primero;
   private int resultado;
   private int contador, contador2; //contador para saber cuantas veces recorrer el for del stack
@@ -27,12 +27,15 @@ public class NuestraCalculadora implements Calculadora{
   private boolean calcular;
   private static NuestraCalculadora singleCalcu; //variable estatica para uso del patron de diseno singleton
   
-  private NuestraCalculadora(){} //constructor privatizado para uso del patron de diseno singleton
+  private NuestraCalculadora(Stack<String> stackString, Stack<Integer> stackInt){
+      this.stack1=stackString;
+      this.stack2=stackInt;
+  } //constructor privatizado para uso del patron de diseno singleton
   
   //Metodo getCalculadora para crear una unica instancia de la clase NuestraCalculadora (patron singleton)
-  public static NuestraCalculadora getCalculadora(){
+  public static NuestraCalculadora getCalculadora(Stack<String> stackString, Stack<Integer> stackInt){
       if (singleCalcu==null){
-          singleCalcu= new NuestraCalculadora();
+          singleCalcu= new NuestraCalculadora(stackString, stackInt);
       }
       return singleCalcu;
   }
