@@ -17,10 +17,10 @@ public class StackLista<E> implements Stack<E>
 	public StackLista(int valor)
 	// post: constructs a new, empty stack
 	{
-            if(valor==3){
+            if(valor==1){
                data = new DoublyLinkedList<E>();
             }
-            if(valor==4){
+            if(valor==2){
                 data = new CircularList<E>();
             }
             else{
