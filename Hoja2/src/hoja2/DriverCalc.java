@@ -7,6 +7,7 @@ Jose Alejandro Rivera - 14213
 Algoritmos y Estructuras de Datos
 Seccion 30
 ***************************************************/
+
 package hoja2; 
 import java.io.*;
 import java.util.logging.Level;
@@ -30,7 +31,7 @@ public class DriverCalc{
                 int eleccionLista; //una eleccion temporal de lista
 		boolean hacer = true;
                 int eleccion2=0;
-                File file = new File("file.txt");
+                File file = new File("datos.txt");
                 //se solicita el tipo de implementacion al usuario
                 System.out.println("Indique por medio del numero que implementacion para el Stack desea utilizar\n1.ArrayList\n2.Vector\n3.Lista");
                 eleccion= scan.nextInt();
