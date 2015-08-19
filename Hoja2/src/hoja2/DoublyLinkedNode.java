@@ -1,4 +1,4 @@
-package hoja2;
+package hoja2; 
 public class DoublyLinkedNode<E>
 {
 protected E data;

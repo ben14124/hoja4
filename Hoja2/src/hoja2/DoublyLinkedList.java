@@ -9,8 +9,9 @@ package hoja2;
  *
  * @author dbs_jd
  */
+
 public class DoublyLinkedList<E> extends abstractLista<E> {
-  //  protected int count;
+  //  protected int count; 
     //protected DoublyLinkedNode<E> head;
 //}
 //public DoublyLinkedList<E> extends abstractList<E>
@@ -68,4 +69,26 @@ public E removeLast()
    count--;
    return temp.value();
 }
+
+  public E removeFirst()
+  // pre: list is not empty
+  // post: removes and returns value from beginning of list
+ {
+	DoublyLinkedNode<E> temp = head;
+	head = head.next(); // move head down list
+	count--;
+	return temp.value();
+ }
+
+ public E getFirst()
+ // pre: list is not empty
+ // post: returns first value in list
+ {
+	return head.value();
+ }
+ 
+ 
+
+
+
 }
