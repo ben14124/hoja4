@@ -27,9 +27,7 @@ public void addFirst(E value)
 // post: adds element to head of list
 {
    Node<E> temp = new Node<E>(value);
-   
-   System.out.println(value);
-   
+      
    if (tail == null) { // first value added
        tail = temp;
        tail.setNext(tail);
