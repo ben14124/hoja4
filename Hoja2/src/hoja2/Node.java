@@ -1,4 +1,4 @@
-package hoja2;
+package hoja2; 
 
 public class Node<E> {
    protected E data; // value stored in this element

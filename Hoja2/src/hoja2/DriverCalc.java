@@ -7,7 +7,7 @@ Jose Alejandro Rivera - 14213
 Algoritmos y Estructuras de Datos
 Seccion 30
 ***************************************************/
-package hoja2;
+package hoja2; 
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -12,4 +12,4 @@ public abstract class abstractLista<E> implements Lista<E> {
       return size() == 0;
    }
     
-}
+} 

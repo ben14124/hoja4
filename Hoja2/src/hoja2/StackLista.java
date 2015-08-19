@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package hoja2;
+package hoja2;  
 
 /**
  *
@@ -12,12 +12,14 @@ package hoja2;
  */
 public class StackLista<E> implements Stack<E>
 {
-	protected SinglyLinkedList<E> data;
+	protected CircularList<E> data;
+    //protected DoublyLinkedList<E> data;
 
 	public StackLista()
 	// post: constructs a new, empty stack
 	{
-		data = new SinglyLinkedList<E>();
+            //data = new DoublyLinkedList<E>();
+		data = new CircularList<E>();
 	}
 
 	public void push(E item)

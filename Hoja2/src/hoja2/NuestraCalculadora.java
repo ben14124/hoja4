@@ -7,7 +7,7 @@ Jose Alejandro Rivera - 14213
 Algoritmos y Estructuras de Datos
 Seccion 30
 ***************************************************/
-package hoja2;
+package hoja2; 
 /**
  * Esta clase implementa a la interface Calculadora; aqui se crea el funcionamiento e los metodos.
  * @see Calculadora 

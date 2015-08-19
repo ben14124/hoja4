@@ -7,7 +7,7 @@ Jose Alejandro Rivera - 14213
 Algoritmos y Estructuras de Datos
 Seccion 30
 ***************************************************/
-package hoja2;
+package hoja2; 
 /**
  * Clase vector que implementa a Stack. En esta clase se define el funcionamiento de los metodos de Stack.
  * @see Stack 

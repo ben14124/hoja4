@@ -9,7 +9,7 @@ public class SinglyLinkedList<E> extends abstractLista<E> {
    // post: generates an empty list
    {
       head = null;
-      count = 0;
+      count = 0; 
    }
    
    public int size() //getSize

@@ -7,7 +7,7 @@ Jose Alejandro Rivera - 14213
 Algoritmos y Estructuras de Datos
 Seccion 30
 ***************************************************/
-package hoja2;
+package hoja2; 
 
 /**
  * Interface Stack. Esta clase contiene los metodos necesarios en un Stack (pilas).
