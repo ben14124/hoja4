@@ -22,7 +22,7 @@ public class StackArrayList<E> implements Stack<E>
 	public StackArrayList()
 	// post: constructs a new, empty stack
 	{
-		data = new ArrayList<E>();
+            data = new ArrayList<E>();
 	}
 
 	public void push(E item)
