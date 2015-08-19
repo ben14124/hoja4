@@ -1,8 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/***************************************************
+Universidad del Valle de Guatemala
+Juan Diego Benitez C. - 14124
+Daniela I. Pocasangre A. - 14162
+Ma. Belen Hernandez - 14361
+Jose Alejandro Rivera - 14213
+Algoritmos y Estructuras de Datos
+Seccion 30
+***************************************************/
+
 package hoja2; 
 /**
  *
@@ -11,7 +16,7 @@ package hoja2;
 public class CalculadoraFactory {
     //metodo que devolvera una instancia del tipo de implementacion que se quiera para el stack
     public Stack implementacionInt(int eleccion, int eleccion2){
-         Stack<Integer> implementacionStack = null;
+         Stack<Integer> implementacionStack=null;
             if (eleccion==1){
                 implementacionStack = new StackArrayList<Integer>();
             }
@@ -24,7 +29,7 @@ public class CalculadoraFactory {
        return implementacionStack;
     }
     public Stack implementacionString(int eleccion, int eleccion2){  
-        Stack<String> implementacionStack = null;
+        Stack<String> implementacionStack=null;
             if (eleccion==1){
                 implementacionStack = new StackArrayList<String>();
             }
