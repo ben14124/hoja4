@@ -88,7 +88,7 @@ public E removeLast()
 	return temp.value();
  }
 
- public E getFirst()
+ public E getFirst() 
  // pre: list is not empty
  // post: returns first value in list
  {
