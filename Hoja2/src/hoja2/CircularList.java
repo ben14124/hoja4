@@ -6,15 +6,17 @@
 package hoja2;
 
 /**
- *
- * @author dbs_jd
+ * Clase publica que define los metodos en una implementacion de lista circular.
+ * Esta se extiende de la clase abstractLista para obtener los metodos dentro de ella.
+ * @see abstractLista
+ * @author  Juan Diego Benitez, Daniela Pocasangre, Belen Hernandez y Alejandro Rivera
  */
-
-
 public class CircularList<E> extends abstractLista<E> {
     protected Node<E> tail; 
     protected int count;
-
+/**
+ * Construye una nueva lista circular.
+ */
 public CircularList()
 // pre: constructs a new circular list
 {
@@ -22,6 +24,10 @@ public CircularList()
    count = 0;
 }
 
+/**
+ * Agrega un elemento a la cabeza de la lista. El valor debe ser diferente a nulo.
+ * @param value Valor de tipo E diferente a null.
+ */
 public void addFirst(E value)
 // pre: value non-null
 // post: adds element to head of list
@@ -39,7 +45,10 @@ public void addFirst(E value)
    count++;
 }
 
-
+/**
+ * Agrega un elemento al final de la lista. El valor debe ser diferente a nulo.
+ * @param value Valor de tipo E diferente a null.
+ */
 public void addLast(E value)
 // pre: value non-null
 // post: adds element to tail of list
@@ -51,7 +60,11 @@ public void addLast(E value)
 
 
 // lo dificil es quitar el elemento de la cola
-
+/**
+ * Regresa y elimina el valor del final de la lista. La lista debe tener al menos
+ * un elemento.
+ * @return count Valor de tipo E del final de la lista.
+ */
 public E removeLast()
 // pre: !isEmpty()
 // post: returns and removes value from tail of list
@@ -73,13 +86,21 @@ public E removeLast()
    return temp.value();
 }
 
+   /**
+    * Regresa la cantidad de elementos de la lista. 
+    * @return count Cantidad de elementos de la lista.
+    */
    public int size() //getSize
    // post: returns number of elements in list
   {
     return count;
   }
    
-   
+    /**
+    * Regresa y elimina el valor del primer elemento de la lista. La lista debe tener
+    * al menos un elemento.
+    * @return count Valor de tipo E al inicio de la lista.
+    */
     public E removeFirst()
   // pre: list is not empty
   // post: removes and returns value from beginning of list
@@ -97,12 +118,17 @@ public E removeLast()
 	return head.value();
  }
 
- public E getFirst() 
- // pre: list is not empty
- // post: returns first value in list
- {
-	return (tail.next()).value();
- }
+    /**
+     * Regresa el primer valor de la lista. La lista debe tener al menos un
+     * elemento.
+     * @return El valor del primer elemento de la lista.
+     */
+    public E getFirst() 
+    // pre: list is not empty
+    // post: returns first value in list
+    {
+           return (tail.next()).value();
+    }
  
 }  
 

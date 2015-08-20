@@ -10,7 +10,7 @@ Seccion 30
 
 package hoja2; 
 /**
- *Esta clase es la interfaz del programa.
+ * Esta clase es la interfaz del programa.
  * @author Juan Diego Benitez, Daniela Pocasangre, Belen Hernandez y Alejandro Rivera
  */
 public interface Calculadora {

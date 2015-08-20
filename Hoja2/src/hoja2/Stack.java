@@ -15,7 +15,6 @@ package hoja2;
  */
 public interface Stack<E> 
 {
-
    /**
     * Un elemento es agregado a la pila. Agrega el elemento pero no lo elimina.
     * @param item Es el elemento a agregar.

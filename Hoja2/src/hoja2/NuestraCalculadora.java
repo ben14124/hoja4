@@ -27,12 +27,25 @@ public class NuestraCalculadora implements Calculadora{
   private boolean calcular;
   private static NuestraCalculadora singleCalcu; //variable estatica para uso del patron de diseno singleton
   
+  /**
+   * Es el constructor privatizado que sirve para el uso del patron de diseño
+   * de singlenton.
+   * @param stackString Pila de Strings.
+   * @param stackInt Pila de enteros.
+   */
   private NuestraCalculadora(Stack<String> stackString, Stack<Integer> stackInt){
       this.stack1=stackString;
       this.stack2=stackInt;
   } //constructor privatizado para uso del patron de diseno singleton
   
   //Metodo getCalculadora para crear una unica instancia de la clase NuestraCalculadora (patron singleton)
+  /**
+   * Sirve para crear una unica instancia de la clase NuestraCalculadora.
+   * Este es el patron Singlenton.
+   * @param stackString Pila de Strings.
+   * @param stackInt Pila de enteros.
+   * @return singleCalcu Objeto nuevo de tipo NuestraCalculadora
+   */
   public static NuestraCalculadora getCalculadora(Stack<String> stackString, Stack<Integer> stackInt){
       if (singleCalcu==null){
           singleCalcu= new NuestraCalculadora(stackString, stackInt);
@@ -40,10 +53,18 @@ public class NuestraCalculadora implements Calculadora{
       return singleCalcu;
   }
   
+  /**
+   * Sirve para ingresar una linea del archivo .text
+   * @param linea Nueva linea del archivo.
+   */
   public void setString(String linea){
       this.linea = linea;
   }
 
+  /**
+   * Esto ayuda al programa a identificar que elementos de la linea son enteros 
+   * y cuales son Strings para saber el tipo de operacion a realizar.
+   */
   public void meterVector(){
     contador = 0;
     letras = 0;
@@ -79,6 +100,11 @@ public class NuestraCalculadora implements Calculadora{
       //=stack1
   }
 
+  /**
+   * Realiza las diferentes operaciones dentro de la linea. Verifica el tipo de
+   * operacion a realizar y la aplica. Contiene tambien la programacion defensiva.
+   * @return calcular Indica si se tiene un error dentro del programa.
+   */
   public boolean calcularVector(){ //try-catch NumberFormatException
   	  primero = stack1.pop();//saca el primero para verificar si es signo
   	  if(primero.equals("+") || primero.equals("-") || primero.equals("*") || primero.equals("/")){
@@ -175,6 +201,10 @@ public class NuestraCalculadora implements Calculadora{
 	  return calcular;
    }
 
+  /**
+   * Obtiene el resultado final de las operaciones en cada linea. 
+   * @return resultado Resultado final de tipo entero.
+   */
   public int getResultado(){
     return resultado;
 
