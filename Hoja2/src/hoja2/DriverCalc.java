@@ -18,9 +18,20 @@ import java.util.Scanner;
  * Driver del programa Calculadora. Aqui se define el documento de texto
  * que se va a utilizar y se imprimen los resultados.
  * @see Calculadora 
+ * @see CalculadoraFactory
  * @see NuestraCalculadora
  * @see Stack
  * @see StackVector
+ * @see StackLista
+ * @see StackArrayList
+ * @see CircularList
+ * @see DoublyLinkedList
+ * @see DoublyLinkedNode
+ * @see Node
+ * @see Lista
+ * @see SinglyLinkedList
+ * @see abstractLista
+ * @see abstractStack
  * @author Juan Diego Benitez, Daniela Pocasangre, Belen Hernandez y Alejandro Rivera
  */
 public class DriverCalc{
